@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111813">
+  <title>Äonenreiche — Der erste Kontinent</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="art.css">
+  <script defer src="world.js"></script>
+  <script defer src="engine.js"></script>
+  <script defer src="relief.js"></script>
+  <script defer src="clock.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="./" aria-label="Äonenreiche neu öffnen"><span class="brand-mark" aria-hidden="true">✦</span><span><strong>ÄONENREICHE</strong><small>DER ERSTE KONTINENT</small></span></a>
+    <div id="economy" class="economy" aria-label="Rohstoffe"></div>
+    <div class="header-actions"><button class="ghost" id="help" type="button" aria-label="Spielhilfe">?</button><button class="ghost" id="menu" type="button">Partie <span aria-hidden="true">≡</span></button></div>
+  </header>
+  <main class="layout">
+    <aside class="left panel" aria-label="Dein Reich">
+      <div id="realm"></div>
+      <nav id="navigation" class="navigation" aria-label="Verwaltung"></nav>
+      <div class="objective"><span class="eyebrow">KAMPAGNENZIEL</span><strong>Herrschaft über Elyndra</strong><p>Vernichte alle anderen Völker. Ein Volk fällt, wenn es keine Stadt mehr hat.</p><div id="objective"></div></div>
+      <div class="legend"><span class="eyebrow">VÖLKER DES KONTINENTS</span><div id="legend"></div></div>
+    </aside>
+    <section class="atlas" aria-label="Weltkarte">
+      <header class="atlas-top"><div><span class="eyebrow" id="stageLabel"><i></i> KAMPAGNE <b> / </b> WELTKARTE</span><h1 id="stageTitle">Elyndra</h1></div><div class="speed" id="speed" aria-label="Spielgeschwindigkeit"></div></header>
+      <div class="canvas" id="canvas"><svg id="map" viewBox="0 0 850 620" aria-label="Interaktive Weltkarte"></svg><button type="button" id="miniControl" class="minimap" aria-label="Minikarte: zur ausgewählten Provinz"><canvas id="minimap" width="180" height="103"></canvas><span>MINIKARTE</span></button><aside id="mapOrder" class="map-order" aria-label="Marschvorschau" hidden></aside><aside id="mapContext" class="map-context" aria-label="Provinzaktionen" hidden></aside></div>
+      <div id="cityView" class="city-view" hidden></div>
+      <section id="workspace" class="workspace" aria-label="Reich verwalten" hidden></section>
+      <div class="map-footer"><div class="map-caption"><span id="ownLegend"></span><span id="mapHint"></span></div><div class="zoom" aria-label="Kartenansicht"><button class="ghost map-mode" id="borders" type="button" aria-pressed="false">Gebiete</button><button class="ghost map-mode" id="worldView" type="button">Welt</button><button class="ghost" id="zoomOut" type="button" aria-label="Verkleinern">−</button><button class="ghost" id="zoomIn" type="button" aria-label="Vergrößern">+</button></div></div>
+    </section>
+    <aside class="right panel" aria-label="Befehle"><div id="inspector"></div><div id="details" class="details"></div></aside>
+    <footer class="dispatch"><div class="dispatch-title"><button type="button" class="chronicle-open" data-do="history"><b>Chronik</b><small id="modeLabel"></small></button></div><div class="messages" id="messages" aria-label="Letzte Chronikeinträge"></div></footer>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <dialog id="dialog" aria-labelledby="dialogTitle"><div id="dialogContent"></div></dialog>
+</body>
+</html>

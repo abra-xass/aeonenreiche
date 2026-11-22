@@ -1,0 +1,28 @@
+{
+  "name": "aeonenreiche",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ein deutschsprachiger Echtzeit-Strategieprototyp: Auf einer Relief-Weltkarte mit 2.254 Provinzen bauen bis zu 14 Völker Städte aus, entwickeln sich über sieben Zeitalter und führen mehrere Feldzüge gleichzeitig. Bestehende Kampagnen behalten ihre bisherige Besetzung und den Besitz an den bisherigen 967 Provinzen; neue Provinzen beginnen unbesetzt.",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "vite build",
+    "dev:graphics": "vite build --watch",
+    "start": "node server.js",
+    "summer:login": "npx --yes summer-engine@4.9.2 login --store",
+    "summer:models": "npx --yes summer-engine@4.9.2 api models",
+    "summer:estimate": "npx --yes summer-engine@4.9.2 api estimate"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.6"
+  },
+  "dependencies": {
+    "@babylonjs/core": "8.31.3",
+    "@babylonjs/loaders": "8.31.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
